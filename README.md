@@ -4,7 +4,7 @@
 The goal of this project is to measure per-token latency and throughput of the LLaMA model at varying batch sizes {1, 8, 32, 128}. The deliverables will be latency vs. throughput graphs and a scaling analysis that explains how efficiency changes with batch size.
 
 ### Background
-In large language models, latency (time to generate each token) and throughput (tokens per second) are critical for both interactive and high-throughput applications. Measuring how these metrics scale with batch size may demonstrates system bottlenecks such as GPU utilization, memory usage, and attention mechanisms. Specially in Transformer arcitecture models in which system configuration is even more key, so we want the best possible estimates of the computation we can undergo within a realistic timeframe.
+In large language models, latency (time to generate each token) and throughput (tokens per second) are critical for both interactive and high-throughput applications. Measuring how these metrics scale with batch size may demonstrate system bottlenecks such as GPU utilization, memory usage, and attention mechanisms. Specially in Transformer architecture models in which system configuration is even more key, so we want the best possible estimates of the computation we can undergo within a realistic timeframe.
 
 ### Proposed Methodology
 
@@ -18,7 +18,7 @@ In large language models, latency (time to generate each token) and throughput (
     - Perform warm-up runs to avoid startup overhead.
     - Collect multiple iterations per configuration to compute averages and variance.
     - Synchronize timing to ensure correctness.
-    - Run the measurements on different batchs with different complications of prompts.
+    - Run the measurements on different batches with different complications of prompts.
     - Vary generation length (e.g., 16, 64, 256) to see dependency on sequence length.
     - Repeat with different precisions (fp32 vs fp16 vs int8) to show speed/accuracy tradeoffs.
 
